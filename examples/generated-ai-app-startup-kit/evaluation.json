@@ -1,0 +1,20 @@
+{
+  "score": 100,
+  "status": "fail",
+  "checks": {
+    "has_domain_map": true,
+    "has_industry_chain": true,
+    "has_risk": true,
+    "has_next_steps": true,
+    "has_fact_inference_distinction": true,
+    "source_count": 8,
+    "strong_source_count": 8,
+    "sources_status": "example_requires_refresh",
+    "manual_fallback": false,
+    "invalid_sources": 0,
+    "placeholder_count": 0
+  },
+  "blocking_issues": [
+    "Sources require refresh or manual fallback, so final pass is blocked."
+  ]
+}

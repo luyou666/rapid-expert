@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rapid Expert Source",
+  "type": "object",
+  "required": ["title", "url", "accessed_at", "source_tier", "confidence"],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "query": {
+      "type": "string"
+    },
+    "published_at": {
+      "type": "string"
+    },
+    "accessed_at": {
+      "type": "string"
+    },
+    "source_tier": {
+      "type": "string",
+      "enum": ["一级", "二级", "三级", "四级", "待分级"]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D", "待分级"]
+    },
+    "verification_required": {
+      "type": "boolean"
+    }
+  }
+}
+

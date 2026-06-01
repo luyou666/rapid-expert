@@ -1,0 +1,14 @@
+{
+  "domain": "AI应用创业",
+  "question": "创业方向验证",
+  "goal": "生成一份 AI 应用创业方向验证学习包",
+  "user_level": "零基础",
+  "daily_time": "1小时",
+  "region": "中国/全球",
+  "time_range": "最近24个月",
+  "no_network": true,
+  "github_query": "AI app agent RAG startup",
+  "min_stars": 10,
+  "github_limit": 5
+}
+

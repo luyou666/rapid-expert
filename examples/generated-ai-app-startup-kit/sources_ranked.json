@@ -1,0 +1,82 @@
+{
+  "domain": "AI应用创业",
+  "question": "创业方向验证",
+  "accessed_at": "2026-05-30T00:00:00+00:00",
+  "status": "example_requires_refresh",
+  "note": "示例来源用于展示交付物结构。正式部署时必须重新运行 scan/rank 并刷新访问时间。",
+  "sources": [
+    {
+      "title": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "query": "AI application startup risk management",
+      "accessed_at": "2026-05-30T00:00:00+00:00",
+      "source_tier": "一级",
+      "confidence": "A",
+      "verification_required": false
+    },
+    {
+      "title": "OpenAI API Documentation",
+      "url": "https://platform.openai.com/docs",
+      "query": "AI application API documentation",
+      "accessed_at": "2026-05-30T00:00:00+00:00",
+      "source_tier": "一级",
+      "confidence": "A",
+      "verification_required": false
+    },
+    {
+      "title": "GitHub Topics: artificial-intelligence",
+      "url": "https://github.com/topics/artificial-intelligence",
+      "query": "AI app github projects",
+      "accessed_at": "2026-05-30T00:00:00+00:00",
+      "source_tier": "二级",
+      "confidence": "B",
+      "verification_required": true
+    },
+    {
+      "title": "GitHub Topics: langchain",
+      "url": "https://github.com/topics/langchain",
+      "query": "AI agent app framework github",
+      "accessed_at": "2026-05-30T00:00:00+00:00",
+      "source_tier": "二级",
+      "confidence": "B",
+      "verification_required": true
+    },
+    {
+      "title": "LlamaIndex Documentation",
+      "url": "https://docs.llamaindex.ai/",
+      "query": "RAG app framework documentation",
+      "accessed_at": "2026-05-30T00:00:00+00:00",
+      "source_tier": "二级",
+      "confidence": "B",
+      "verification_required": true
+    },
+    {
+      "title": "LangChain Documentation",
+      "url": "https://python.langchain.com/docs/",
+      "query": "AI agent framework documentation",
+      "accessed_at": "2026-05-30T00:00:00+00:00",
+      "source_tier": "二级",
+      "confidence": "B",
+      "verification_required": true
+    },
+    {
+      "title": "OWASP Top 10 for Large Language Model Applications",
+      "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+      "query": "LLM application security risks",
+      "accessed_at": "2026-05-30T00:00:00+00:00",
+      "source_tier": "二级",
+      "confidence": "B",
+      "verification_required": true
+    },
+    {
+      "title": "Anthropic Claude Documentation",
+      "url": "https://docs.anthropic.com/",
+      "query": "AI application model provider documentation",
+      "accessed_at": "2026-05-30T00:00:00+00:00",
+      "source_tier": "一级",
+      "confidence": "A",
+      "verification_required": false
+    }
+  ]
+}
+

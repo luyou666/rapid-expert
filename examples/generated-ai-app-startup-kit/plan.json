@@ -1,0 +1,18 @@
+{
+  "domain": "AI应用创业",
+  "recommended_days": 9,
+  "risk": {
+    "risk_level": "low",
+    "flags": [],
+    "unsafe_hits": [],
+    "safe_mode_required": false,
+    "message": "No high-risk keyword matched. Continue normal evidence-based workflow."
+  },
+  "reason": {
+    "score": 4,
+    "user_level": "零基础",
+    "daily_time": "1小时",
+    "goal": "创业方向验证"
+  }
+}
+

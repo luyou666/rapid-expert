@@ -1,0 +1,19 @@
+{
+  "name": "rapid-expert-mvp",
+  "version": "0.3.0",
+  "license": "MIT",
+  "disclaimer": "For learning, research, source organization, and workflow assistance only. Not professional advice.",
+  "skill_dir": "../../adapters/claude-code",
+  "required_files": [
+    "SKILL.md",
+    "knowledge/intake-questions.md",
+    "knowledge/adaptive-learning-protocol.md"
+  ],
+  "recommended_knowledge_folders": [
+    "../../system",
+    "../../skills",
+    "../../rag",
+    "../../safety",
+    "../../tests"
+  ]
+}

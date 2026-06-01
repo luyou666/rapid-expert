@@ -1,0 +1,16 @@
+services:
+  rapid-expert-harness:
+    build: .
+    ports:
+      - "8765:8765"
+    environment:
+      HARNESS_HOST: "0.0.0.0"
+      HARNESS_PORT: "8765"
+      HARNESS_API_TOKEN: "${HARNESS_API_TOKEN:?Set HARNESS_API_TOKEN in .env before starting}"
+      HARNESS_MAX_BODY_BYTES: "${HARNESS_MAX_BODY_BYTES:-1048576}"
+      GITHUB_TOKEN: "${GITHUB_TOKEN:-}"
+    volumes:
+      - ./sessions:/app/sessions
+      - ./queue:/app/queue
+      - ./outputs:/app/outputs
+    command: ["python", "scripts/harness_server.py", "--host", "0.0.0.0", "--port", "8765"]

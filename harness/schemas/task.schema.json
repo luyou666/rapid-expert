@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rapid Expert Harness Task",
+  "type": "object",
+  "required": ["domain", "goal"],
+  "properties": {
+    "domain": { "type": "string", "maxLength": 120 },
+    "question": { "type": "string", "maxLength": 4000 },
+    "goal": { "type": "string", "maxLength": 4000 },
+    "user_level": { "type": "string", "maxLength": 120 },
+    "daily_time": { "type": "string", "maxLength": 120 },
+    "region": { "type": "string", "maxLength": 120 },
+    "time_range": { "type": "string", "maxLength": 120 },
+    "no_network": { "type": "boolean" },
+    "github_query": { "type": "string", "maxLength": 300 },
+    "min_stars": { "type": "integer" },
+    "github_limit": { "type": "integer" }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rapid Expert Session State",
+  "type": "object",
+  "required": [
+    "user_profile",
+    "target_domain",
+    "learning_days",
+    "daily_progress",
+    "weak_points",
+    "source_library",
+    "final_deliverable",
+    "safety_flags"
+  ],
+  "properties": {
+    "user_profile": {
+      "type": "object"
+    },
+    "target_domain": {
+      "type": "string"
+    },
+    "learning_days": {
+      "type": "integer",
+      "enum": [5, 7, 9, 12]
+    },
+    "daily_progress": {
+      "type": "array"
+    },
+    "weak_points": {
+      "type": "array"
+    },
+    "source_library": {
+      "type": "array"
+    },
+    "final_deliverable": {
+      "type": "string"
+    },
+    "safety_flags": {
+      "type": "array"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  }
+}
+

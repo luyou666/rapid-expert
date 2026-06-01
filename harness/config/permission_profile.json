@@ -1,0 +1,27 @@
+{
+  "version": "0.1.0",
+  "allowed_tools": [
+    "risk",
+    "plan",
+    "scan",
+    "rank",
+    "rag_index",
+    "github_search",
+    "build",
+    "evaluate"
+  ],
+  "allowed_python_scripts": [
+    "scripts/rapid_expert.py",
+    "scripts/rag_index.py"
+  ],
+  "approval_required_tools": [
+    "github_search"
+  ],
+  "deny_shell_executables": [
+    "cmd.exe",
+    "powershell.exe",
+    "pwsh.exe",
+    "bash",
+    "sh"
+  ]
+}

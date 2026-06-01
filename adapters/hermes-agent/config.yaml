@@ -1,0 +1,77 @@
+name: rapid-expert-mvp
+version: 0.2.0
+description: Interactive CLI/domain learning agent for 5-12 day practical business execution.
+license: MIT
+disclaimer: For learning, research, source organization, and workflow assistance only. Not professional advice.
+
+system_prompt: system-prompt.md
+workflow: workflow.md
+rag_config: rag-config.md
+memory_policy: memory-policy.md
+
+commands:
+  intake:
+    description: Ask startup questions and build user profile.
+    reads:
+      - ../../system/intake-questions.md
+      - ../../system/master-instructions.md
+    writes:
+      - state.user_profile
+      - state.safety_flags
+  plan:
+    description: Select 5, 7, 9, or 12 day route.
+    reads:
+      - ../../system/adaptive-learning-protocol.md
+    writes:
+      - state.learning_days
+      - outputs/learning-plan.md
+  scan:
+    description: Collect and rank fresh sources and reusable solutions.
+    tools:
+      - collect_sources
+      - rank_sources
+    writes:
+      - outputs/sources_raw.json
+      - outputs/sources_ranked.json
+      - outputs/reusable-solutions.md
+  map:
+    description: Generate domain map and business analysis package.
+    reads:
+      - ../../domain-kit-template/
+      - ../../skills/
+    writes:
+      - outputs/domain-map.md
+      - outputs/industry-chain.md
+      - outputs/moat-analysis.md
+  train:
+    description: Execute daily practical tasks and update progress.
+    reads:
+      - ../../system/adaptive-learning-protocol.md
+      - ../../memory/
+    writes:
+      - state.daily_progress
+      - outputs/daily/
+  evaluate:
+    description: Run final practical evaluation.
+    reads:
+      - ../../tests/final-practical-evaluation.md
+    writes:
+      - outputs/evaluation-report.md
+
+tools:
+  collect_sources:
+    argv: ["python", "../openclaw-openhands/scripts/collect_sources.py"]
+  rank_sources:
+    argv: ["python", "../openclaw-openhands/scripts/rank_sources.py"]
+  build_report:
+    argv: ["python", "../openclaw-openhands/scripts/build_report.py"]
+
+state_schema:
+  user_profile: object
+  target_domain: string
+  learning_days: integer
+  daily_progress: array
+  weak_points: array
+  source_library: array
+  final_deliverable: string
+  safety_flags: array

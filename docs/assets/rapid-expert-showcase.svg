@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Rapid Expert Project Showcase</title>
+  <desc id="desc">Cyber style project showcase for the Rapid Expert interactive CLI agent.</desc>
+  <defs>
+    <linearGradient id="titleGradient" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#d9ecff"/>
+      <stop offset="100%" stop-color="#5db8ff"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#6fd2ff"/>
+      <stop offset="100%" stop-color="#1b79ff"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8fe6ff" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#399cff" stop-opacity=".8"/>
+      <stop offset="100%" stop-color="#00101e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.15 0 0 0 0 0.62 0 0 0 0 1 0 0 0 .8 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#15314c" stroke-width="1" opacity=".35"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="#03080e"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1170" cy="410" r="390" fill="url(#coreGlow)" opacity=".42"/>
+
+  <g transform="translate(78 92)">
+    <text x="0" y="92" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="112" font-weight="800" fill="url(#titleGradient)">急速专家</text>
+    <text x="0" y="178" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-style="italic" letter-spacing="3" fill="#64bdff">Rapid Expert</text>
+    <path d="M285 164h220m18 0h16m10 0h8" stroke="#2d9cff" stroke-width="4"/>
+    <text x="0" y="278" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="38" font-weight="700" fill="#f7fbff">泛用型领域专家速成 <tspan fill="#5ebdff">Agent</tspan></text>
+    <text x="0" y="330" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="24" fill="#b9c8d8">通过交互式对话、系统化学习引导、资料检索与本地 Harness 执行，</text>
+    <text x="0" y="368" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="24" fill="#b9c8d8">帮助 0 基础用户在 5-12 天内借助 AI / Agent 参与真实业务任务。</text>
+
+    <g transform="translate(0 430)" font-family="Segoe UI, Microsoft YaHei, Arial, sans-serif" font-size="18" fill="#eaf6ff">
+      <g>
+        <rect x="0" y="0" width="132" height="56" rx="8" fill="#071321" stroke="#286aa6"/>
+        <text x="42" y="36">CLI Agent</text>
+        <path d="M18 20l12 10-12 10M34 40h20" stroke="#46bdff" stroke-width="3" fill="none"/>
+      </g>
+      <g transform="translate(150 0)">
+        <rect x="0" y="0" width="130" height="56" rx="8" fill="#071321" stroke="#286aa6"/>
+        <text x="54" y="36">Harness</text>
+        <path d="M22 17l20 11v22L22 39z" stroke="#46bdff" stroke-width="3" fill="none"/>
+      </g>
+      <g transform="translate(298 0)">
+        <rect x="0" y="0" width="120" height="56" rx="8" fill="#071321" stroke="#286aa6"/>
+        <text x="58" y="36">Skills</text>
+        <circle cx="30" cy="28" r="13" stroke="#46bdff" stroke-width="3" fill="none"/>
+      </g>
+      <g transform="translate(436 0)">
+        <rect x="0" y="0" width="112" height="56" rx="8" fill="#071321" stroke="#286aa6"/>
+        <text x="57" y="36">RAG</text>
+        <circle cx="30" cy="26" r="11" stroke="#46bdff" stroke-width="3" fill="none"/>
+        <path d="M39 35l13 13" stroke="#46bdff" stroke-width="3"/>
+      </g>
+      <g transform="translate(566 0)">
+        <rect x="0" y="0" width="132" height="56" rx="8" fill="#071321" stroke="#286aa6"/>
+        <text x="62" y="36">Adapters</text>
+        <path d="M27 17v22m-10-11h20" stroke="#46bdff" stroke-width="3"/>
+      </g>
+    </g>
+
+    <g transform="translate(0 560)" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="25" fill="#dce8f5">
+      <text x="50" y="0">本地优先运行</text>
+      <text x="50" y="54">支持 Claude Code / Hermes / OpenClaw / OpenHands</text>
+      <text x="50" y="108">面向学习、调研与真实业务执行</text>
+      <path d="M4 -17l18 12 26-28" stroke="#3db9ff" stroke-width="4" fill="none"/>
+      <path d="M8 36l20-10 20 10-20 10zM8 54l20-10 20 10" stroke="#3db9ff" stroke-width="3" fill="none"/>
+      <circle cx="28" cy="92" r="14" stroke="#3db9ff" stroke-width="3" fill="none"/>
+      <path d="M28 74v10M28 100v10M10 92h10M36 92h10" stroke="#3db9ff" stroke-width="3"/>
+    </g>
+
+    <g transform="translate(0 690)">
+      <rect width="760" height="82" rx="10" fill="#07111d" stroke="#23415f"/>
+      <text x="28" y="52" font-family="Consolas, Cascadia Mono, monospace" font-size="28" fill="#5cff9c">&gt; study hacker</text>
+      <rect x="217" y="29" width="14" height="32" fill="#8fffd0">
+        <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <g transform="translate(865 84)" filter="url(#glow)">
+    <circle cx="330" cy="350" r="118" fill="none" stroke="#3ea7ff" stroke-width="3" opacity=".7"/>
+    <circle cx="330" cy="350" r="180" fill="none" stroke="#245d9b" stroke-width="1.5" opacity=".6"/>
+    <circle cx="330" cy="350" r="245" fill="none" stroke="#163a63" stroke-width="1" opacity=".55"/>
+    <path d="M330 176v348M156 350h348" stroke="#49b9ff" stroke-width="2" opacity=".7"/>
+    <circle cx="330" cy="350" r="68" fill="url(#blueGlow)" opacity=".9"/>
+    <ellipse cx="330" cy="354" rx="78" ry="62" fill="#061422" stroke="#7ae4ff" stroke-width="4"/>
+    <circle cx="304" cy="350" r="9" fill="#62dcff"/>
+    <circle cx="356" cy="350" r="9" fill="#62dcff"/>
+    <path d="M251 354h-18M409 354h18" stroke="#63d5ff" stroke-width="8" stroke-linecap="round"/>
+
+    <g font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="18" fill="#eaf6ff">
+      <g transform="translate(230 0)">
+        <rect width="204" height="94" rx="14" fill="#081624" stroke="#3876ad"/>
+        <text x="22" y="34" font-weight="700">对话与任务理解</text>
+        <path d="M24 55h150M24 72h112" stroke="#3b6b96" stroke-width="4"/>
+      </g>
+      <g transform="translate(0 250)">
+        <rect width="190" height="104" rx="14" fill="#081624" stroke="#3876ad"/>
+        <text x="22" y="36" font-weight="700">学习引导</text>
+        <path d="M28 58h32v36H28zM66 58h32v36H66" stroke="#4dbbff" stroke-width="3" fill="none"/>
+      </g>
+      <g transform="translate(470 250)">
+        <rect width="202" height="104" rx="14" fill="#081624" stroke="#3876ad"/>
+        <text x="22" y="36" font-weight="700">资料检索 (RAG)</text>
+        <circle cx="44" cy="72" r="17" stroke="#4dbbff" stroke-width="3" fill="none"/>
+        <path d="M58 86l20 20" stroke="#4dbbff" stroke-width="3"/>
+      </g>
+      <g transform="translate(230 580)">
+        <rect width="204" height="104" rx="14" fill="#081624" stroke="#3876ad"/>
+        <text x="22" y="36" font-weight="700">本地 Harness 执行</text>
+        <rect x="24" y="58" width="52" height="38" rx="5" stroke="#4dbbff" stroke-width="3" fill="none"/>
+        <path d="M37 69l11 8-11 8M52 86h16" stroke="#4dbbff" stroke-width="3" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

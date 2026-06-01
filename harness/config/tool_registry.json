@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0",
+  "tools": {
+    "risk": {
+      "description": "Classify domain and question risk before execution.",
+      "argv": ["python", "scripts/rapid_expert.py", "risk", "--domain", "{domain}", "--question", "{question}", "--output", "{risk_output}"]
+    },
+    "plan": {
+      "description": "Choose 5, 7, 9, or 12 day route.",
+      "argv": ["python", "scripts/rapid_expert.py", "plan", "--domain", "{domain}", "--user-level", "{user_level}", "--daily-time", "{daily_time}", "--goal", "{goal}", "--output", "{plan_output}"]
+    },
+    "scan": {
+      "description": "Collect current source candidates.",
+      "argv": ["python", "scripts/rapid_expert.py", "scan", "--domain", "{domain}", "--question", "{question}", "--region", "{region}", "--time-range", "{time_range}", "--safe-mode", "{no_network_flag}", "--output", "{sources_raw}"]
+    },
+    "rank": {
+      "description": "Rank collected source candidates.",
+      "argv": ["python", "scripts/rapid_expert.py", "rank", "--input", "{sources_raw}", "--output", "{sources_ranked}"]
+    },
+    "rag_index": {
+      "description": "Build a lightweight searchable RAG index from ranked sources.",
+      "argv": ["python", "scripts/rag_index.py", "build", "--sources", "{sources_ranked}", "--output", "{rag_index_output}"]
+    },
+    "github_search": {
+      "description": "Search GitHub repositories through GitHub API.",
+      "argv": ["python", "scripts/rapid_expert.py", "github-search", "--query", "{github_query}", "--min-stars", "{min_stars}", "--limit", "{github_limit}", "--output", "{github_output}"],
+      "optional": true
+    },
+    "build": {
+      "description": "Build domain kit report skeleton.",
+      "argv": ["python", "scripts/rapid_expert.py", "build", "--domain", "{domain}", "--sources", "{sources_ranked}", "--duration", "{duration}", "--user-level", "{user_level}", "--output", "{report_output}"]
+    },
+    "evaluate": {
+      "description": "Evaluate generated report and sources.",
+      "argv": ["python", "scripts/rapid_expert.py", "evaluate", "--report", "{report_output}", "--sources", "{sources_ranked}", "--output", "{evaluation_output}"]
+    }
+  }
+}

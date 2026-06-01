@@ -1,0 +1,48 @@
+{
+  "license": "MIT",
+  "disclaimer": "For learning, research, source organization, and workflow assistance only. Not professional advice.",
+  "tools": [
+    {
+      "name": "rapid_expert_harness",
+      "argv_prefix": ["python", "../../scripts/harness.py"],
+      "commands": ["run", "step", "status"]
+    },
+    {
+      "name": "rapid_expert_harness_server",
+      "argv_prefix": ["python", "../../scripts/harness_server.py"],
+      "commands": ["--host", "--port"]
+    },
+    {
+      "name": "rapid_expert_harness_mcp",
+      "argv_prefix": ["python", "../../scripts/harness_mcp.py"],
+      "commands": ["stdio"]
+    },
+    {
+      "name": "rapid_expert_queue",
+      "argv_prefix": ["python", "../../scripts/harness_queue.py"],
+      "commands": ["submit", "status", "list", "run-next", "run-all", "approve"]
+    },
+    {
+      "name": "rapid_expert_rag",
+      "argv_prefix": ["python", "../../scripts/rag_index.py"],
+      "commands": ["build", "search"]
+    },
+    {
+      "name": "rapid_expert_diag",
+      "argv_prefix": ["python", "../../scripts/harness_diag.py"],
+      "commands": ["health", "metrics", "export"]
+    },
+    {
+      "name": "rapid_expert_contracts",
+      "argv_prefix": ["python", "../../scripts/harness_contract.py"],
+      "commands": ["write", "openapi", "mcp-tools"]
+    },
+    {
+      "name": "rapid_expert_cli",
+      "argv_prefix": ["python", "../../scripts/rapid_expert.py"],
+      "commands": ["risk", "plan", "scan", "rank", "build", "evaluate", "github-search"]
+    }
+  ],
+  "state_schema": "../../state/schemas/session-state.schema.json",
+  "safety_policy": "../../safety/high-risk-domain-policy.md"
+}

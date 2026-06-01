@@ -1,0 +1,3 @@
+# Runtime uses Python standard library only.
+# Python >= 3.10 is recommended.
+# License: MIT. See LICENSE.

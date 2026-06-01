@@ -1,0 +1,439 @@
+{
+  "tools": [
+    {
+      "name": "rapid_expert_run",
+      "description": "Run the Rapid Expert Harness loop for a task.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "task"
+        ],
+        "properties": {
+          "task": {
+            "type": "object",
+            "required": [
+              "domain",
+              "goal"
+            ],
+            "properties": {
+              "domain": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "goal": {
+                "type": "string",
+                "maxLength": 4000
+              },
+              "question": {
+                "type": "string",
+                "maxLength": 4000
+              },
+              "user_level": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "daily_time": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "region": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "time_range": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "no_network": {
+                "type": "boolean"
+              },
+              "github_query": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "min_stars": {
+                "type": "integer"
+              },
+              "github_limit": {
+                "type": "integer"
+              }
+            }
+          },
+          "session_id": {
+            "type": "string"
+          },
+          "resume": {
+            "type": "boolean"
+          },
+          "from_step": {
+            "type": "string",
+            "enum": [
+              "risk",
+              "plan",
+              "scan",
+              "rank",
+              "rag_index",
+              "github_search",
+              "build",
+              "evaluate"
+            ]
+          },
+          "to_step": {
+            "type": "string",
+            "enum": [
+              "risk",
+              "plan",
+              "scan",
+              "rank",
+              "rag_index",
+              "github_search",
+              "build",
+              "evaluate"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_step",
+      "description": "Run one Rapid Expert Harness step.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "session_id",
+          "task",
+          "name"
+        ],
+        "properties": {
+          "session_id": {
+            "type": "string"
+          },
+          "task": {
+            "type": "object",
+            "required": [
+              "domain",
+              "goal"
+            ],
+            "properties": {
+              "domain": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "goal": {
+                "type": "string",
+                "maxLength": 4000
+              },
+              "question": {
+                "type": "string",
+                "maxLength": 4000
+              },
+              "user_level": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "daily_time": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "region": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "time_range": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "no_network": {
+                "type": "boolean"
+              },
+              "github_query": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "min_stars": {
+                "type": "integer"
+              },
+              "github_limit": {
+                "type": "integer"
+              }
+            }
+          },
+          "name": {
+            "type": "string",
+            "enum": [
+              "risk",
+              "plan",
+              "scan",
+              "rank",
+              "rag_index",
+              "github_search",
+              "build",
+              "evaluate"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_status",
+      "description": "Read a Rapid Expert Harness session status.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "session_id"
+        ],
+        "properties": {
+          "session_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_events",
+      "description": "Read JSONL events for a Rapid Expert Harness session.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "session_id"
+        ],
+        "properties": {
+          "session_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_rag_search",
+      "description": "Search a session RAG index.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "session_id",
+          "query"
+        ],
+        "properties": {
+          "session_id": {
+            "type": "string"
+          },
+          "query": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_queue_submit",
+      "description": "Submit a task to the file-backed harness job queue.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "task"
+        ],
+        "properties": {
+          "task": {
+            "type": "object",
+            "required": [
+              "domain",
+              "goal"
+            ],
+            "properties": {
+              "domain": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "goal": {
+                "type": "string",
+                "maxLength": 4000
+              },
+              "question": {
+                "type": "string",
+                "maxLength": 4000
+              },
+              "user_level": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "daily_time": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "region": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "time_range": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "no_network": {
+                "type": "boolean"
+              },
+              "github_query": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "min_stars": {
+                "type": "integer"
+              },
+              "github_limit": {
+                "type": "integer"
+              }
+            }
+          },
+          "session_id": {
+            "type": "string"
+          },
+          "from_step": {
+            "type": "string",
+            "enum": [
+              "risk",
+              "plan",
+              "scan",
+              "rank",
+              "rag_index",
+              "github_search",
+              "build",
+              "evaluate"
+            ]
+          },
+          "to_step": {
+            "type": "string",
+            "enum": [
+              "risk",
+              "plan",
+              "scan",
+              "rank",
+              "rag_index",
+              "github_search",
+              "build",
+              "evaluate"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_queue_run_next",
+      "description": "Run the next queued harness job.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "rapid_expert_queue_list",
+      "description": "List queued harness jobs.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "rapid_expert_queue_status",
+      "description": "Read a queued job by job_id.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "job_id"
+        ],
+        "properties": {
+          "job_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_queue_approve",
+      "description": "Approve a tool for a queued or awaiting-approval job.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "job_id",
+          "tool"
+        ],
+        "properties": {
+          "job_id": {
+            "type": "string"
+          },
+          "tool": {
+            "type": "string",
+            "enum": [
+              "risk",
+              "plan",
+              "scan",
+              "rank",
+              "rag_index",
+              "github_search",
+              "build",
+              "evaluate"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_queue_cancel",
+      "description": "Cancel a non-running queued harness job.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "job_id"
+        ],
+        "properties": {
+          "job_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_queue_retry",
+      "description": "Requeue a failed or cancelled harness job if retry attempts remain.",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "job_id"
+        ],
+        "properties": {
+          "job_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "rapid_expert_health",
+      "description": "Run harness health diagnostics.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "rapid_expert_metrics",
+      "description": "Read queue and health metrics.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "rapid_expert_export_package",
+      "description": "Export a clean deployment zip without runtime outputs.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "output": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ]
+}
